@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>学习平台讲师主页示例</title>
+  <meta name="description" content="示例静态网页 - 讲师主页与课程列表" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="logo">学习平台示例</div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html" class="active">主页</a></li>
+        <li><button id="themeToggle" aria-label="切换主题">🌓 主题</button></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-slider" aria-labelledby="hero-title" role="region" aria-roledescription="carousel">
+      <h1 id="hero-title" class="sr-only">主页焦点轮播</h1>
+      <div class="slider" data-slider>
+        <div class="slides" data-slides>
+          <figure class="slide is-active" data-index="0">
+            <img src="images/slide1.svg" alt="人工智能基础课程宣传图" />
+            <figcaption>
+              <h2>人工智能基础入门</h2>
+              <p>构建系统认知，快速了解 AI 核心概念与应用场景。</p>
+              <a class="btn" href="#courses">浏览课程</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" data-index="1">
+            <img src="images/slide2.svg" alt="机器学习实战课程宣传图" />
+            <figcaption>
+              <h2>机器学习实战进阶</h2>
+              <p>数据到上线完整流程，强化工程思维与调优能力。</p>
+              <a class="btn" href="#courses">查看详情</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" data-index="2">
+            <img src="images/slide3.svg" alt="大模型进阶课程宣传图" />
+            <figcaption>
+              <h2>现代 NLP 与大模型</h2>
+              <p>掌握 Transformer 与预训练微调策略，拓展前沿技术。</p>
+              <a class="btn" href="#courses">立即探索</a>
+            </figcaption>
+          </figure>
+        </div>
+        <button class="nav prev" data-prev aria-label="上一张">‹</button>
+        <button class="nav next" data-next aria-label="下一张">›</button>
+        <div class="dots" data-dots aria-label="轮播分页指示"></div>
+      </div>
+    </section>
+
+    <section id="instructor" class="instructor" aria-labelledby="instructor-title">
+      <h2 id="instructor-title">讲师简介</h2>
+      <div class="card instructor-card">
+        <div class="avatar">
+          <img src="image.png" alt="讲师头像" />
+        </div>
+        <div class="info">
+          <h3>王老师</h3>
+          <p class="tagline">专注人工智能与大数据教学</p>
+          <p>拥有多年企业与教学经验，课程注重实战与系统思维，帮助学员快速掌握核心技能。</p>
+          <ul class="stats" aria-label="讲师数据">
+            <li><strong id="totalCourses">--</strong><span>课程数</span></li>
+            <li><strong>4.9</strong><span>评分</span></li>
+            <li><strong>12000+</strong><span>学员</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="courses" aria-labelledby="courses-title">
+      <div class="section-head">
+        <h2 id="courses-title">课程列表</h2>
+        <div class="filters" aria-label="筛选">
+          <label>
+            <span class="sr-only">搜索课程</span>
+            <input type="search" id="searchInput" placeholder="搜索课程..." />
+          </label>
+        </div>
+      </div>
+      <div id="courseList" class="course-grid" role="list">
+        <!-- JS 动态填充 -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">联系与关注</h2>
+      <p>如需合作或咨询，请发送邮件至 <a href="mailto:instructor@example.com">instructor@example.com</a>。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 学习平台示例. 本页面仅为演示使用。</p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
