@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "单词深义助手",
+  "description": "查询英文单词的词义、词根、词缀、派生词与助记 (Deepseek API)",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "单词查询",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://api.deepseek.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

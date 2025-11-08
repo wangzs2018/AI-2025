@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>单词深义助手</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <form id="queryForm" class="row-form" autocomplete="off">
+      <input id="wordInput" name="word" type="text" required placeholder="请输入要查询的单词" aria-label="输入要查询的单词" />
+      <div class="btn-group">
+        <button type="submit" id="queryBtn" class="primary">查询</button>
+        <button type="button" id="clearBtn">清除</button>
+      </div>
+    </form>
+    <div class="radio-row" id="optionGroup" role="radiogroup" aria-label="结果类型选择">
+      <!-- 动态插入单选按钮 -->
+    </div>
+    <div id="loading" class="status hidden">查询中...</div>
+    <div id="error" class="status error hidden" role="alert"></div>
+    <textarea id="display" readonly placeholder="结果显示区" aria-label="结果显示区"></textarea>
+    <div class="tools">
+      <button type="button" id="copyBtn" aria-label="复制当前内容">复制</button>
+    </div>
+  </main>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
